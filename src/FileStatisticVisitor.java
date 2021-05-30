@@ -2,7 +2,7 @@ public class FileStatisticVisitor implements FileVisitor{
 
     @Override
     public void visit(DocxFileDetails docxFileDetails) {
-       System.out.println("The file " + docxFileDetails.name + " has an average of " + String.format("%.6f", (double)docxFileDetails.getWords()/docxFileDetails.getPages()) + " words per page.");
+        System.out.println("The file " + docxFileDetails.name + " has an average of " + String.format("%.6f", (double)docxFileDetails.getWords()/docxFileDetails.getPages()) + " words per page.");
     }
 
     @Override
@@ -22,7 +22,7 @@ public class FileStatisticVisitor implements FileVisitor{
 
     @Override
     public void visit(JpgFileDetails jpgFileDetails) {
-        System.out.println("The picture " + jpgFileDetails.name + " has an average of " + String.format("%.6f", (double)jpgFileDetails.getSize() / (jpgFileDetails.getHeight() * jpgFileDetails.getWidth())) + " bytes per pixel.");
+        System.out.println("The picture " + jpgFileDetails.name + " has an average of " + String.format("%.6f", (double)jpgFileDetails.getSize() / (jpgFileDetails.getHeight() * jpgFileDetails.getWidth())) + " bits per pixel.");
     }
 
     @Override
