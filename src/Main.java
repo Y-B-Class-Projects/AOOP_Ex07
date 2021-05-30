@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+
 public class Main {
 
     public static void main(String[] args) throws IOException {
@@ -65,8 +66,14 @@ public class Main {
                 "sp: spicy\n" +
                 "la: lamb\n" +
                 "hm: homemade");
-        // TODO: Add a Hamburger Factory and use it to create a Hamburger
-        Hamburger hamburger = null;
+
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+
+
+        HamburgerFactory hamburgerFactory = new HamburgerFactory();
+        Hamburger hamburger = hamburgerFactory.createHamburger(s);
+
 
         String choice="";
         while (!choice.equals("s")) {
@@ -91,7 +98,12 @@ public class Main {
                 "or: onion rings\n" +
                 "sa: salad\n" +
                 "fe: friedEgg");
-        // TODO: Add a Hamburger-Topping Factory and use it to create a decorated Hamburger
-        return null;
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+
+        HamburgerToppingFactory hamburgerToppingFactory = new HamburgerToppingFactory();
+        Hamburger h = hamburgerToppingFactory.createTopping(hamburger, s);
+
+        return h;
     }
 }
