@@ -20,4 +20,9 @@ public class JpgFileDetails extends FileDetails {
     public int getSize() {
         return size;
     }
+
+    @Override
+    public void accept(FileVisitor visitor) {
+        visitor.visit(this);
+    }
 }
