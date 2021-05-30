@@ -34,7 +34,7 @@ public class Main {
         return root;
     }
     public static void fileMenu(Scanner scanner) throws IOException {
-        String path="src/files.txt";
+        String path="files.txt";
         FileDetails root= readFileDetails(path);
         System.out.println("Choose from the following options:\n" +
                 "q: quit\n" +
